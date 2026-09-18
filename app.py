@@ -379,5 +379,6 @@ or load their content using JavaScript.
 if __name__ == "__main__":
     app.launch(
         theme=gr.themes.Soft(),
-        server_port=7878,
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 7878)),
     )
